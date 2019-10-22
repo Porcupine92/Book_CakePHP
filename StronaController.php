@@ -51,8 +51,8 @@ class StronaController extends AppController {
 		
 	//analizuje otrzymane wyniki    
 		foreach($tmp['Book']['Review'] as $k=>$v){
-			if($v['sex']=='f'){
-				if($v['age']<30){
+			if($v['sex'] == 'f'){
+				if($v['age'] < 30){
 					$tmp['Review']['before30']['female']['no'] += 1;
 					$tmp['Review']['before30']['female']['all'] += $v['age']; 
 				}elseif($v['age']>30){
@@ -60,10 +60,10 @@ class StronaController extends AppController {
 					$tmp['Review']['after30']['female']['all'] += $v['age']; 
 				}
 			}else{
-				if($v['age']<30){
+				if($v['age'] < 30){
 					$tmp['Review']['before30']['male']['no'] += 1;
 					$tmp['Review']['before30']['male']['all'] += $v['age']; 
-				}elseif($v['age']>30){
+				}elseif($v['age'] > 30){
 					$tmp['Review']['after30']['male']['no'] += 1;
 					$tmp['Review']['after30']['male']['all'] += $v['age']; 
 				}
@@ -147,19 +147,19 @@ class StronaController extends AppController {
 
 			//Analizuje otrzymane wyniki    
 				foreach($vb['Review'] as $k=>$v){
-					if($v['sex']=='f'){
-						if($v['age']<30){
+					if($v['sex'] == 'f'){
+						if($v['age'] < 30){
 							$tmp['Review']['before30']['female']['no'] += 1;
 							$tmp['Review']['before30']['female']['all'] += $v['age']; 
-						}elseif($v['age']>30){
+						}elseif($v['age'] > 30){
 							$tmp['Review']['after30']['female']['no'] += 1;
 							$tmp['Review']['after30']['female']['all'] += $v['age']; 
 						}
 					}else{
-						if($v['age']<30){
+						if($v['age'] < 30){
 							$tmp['Review']['before30']['male']['no'] += 1;
 							$tmp['Review']['before30']['male']['all'] += $v['age']; 
-						}elseif($v['age']>30){
+						}elseif($v['age'] > 30){
 							$tmp['Review']['after30']['male']['no'] += 1;
 							$tmp['Review']['after30']['male']['all'] += $v['age']; 
 						}
@@ -183,7 +183,7 @@ class StronaController extends AppController {
 			$el['Books'][] = $pom;
 		}
 		
-		$this->set('el',$el);
+		$this->set('el', $el);
     }
 	
 }
