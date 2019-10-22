@@ -65,7 +65,7 @@
 	</thead>
 	<tbody>
 	<?php foreach($el['Books'] as $k=>$v){ 
-		if(!($v['Review']['before30']['female']==0 && $v['Review']['before30']['male']==0)){ ?>
+		if(!($v['Review']['before30']['female'] == 0 && $v['Review']['before30']['male'] == 0)){ ?>
 			<tr>
 				<td>
 					<?php echo $v['name']; ?>
